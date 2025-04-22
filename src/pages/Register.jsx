@@ -46,7 +46,7 @@ const Register = () => {
     }
     try {
       // Ensure your backend URL is correct and running
-      await axios.post("http://localhost:5000/api/users", {
+      await axios.post("https://memotag-backend-jmqy.onrender.com/api/users", {
         username,
         email,
         phonenumber,

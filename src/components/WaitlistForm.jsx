@@ -14,7 +14,7 @@ const WaitlistForm = ({ onClose }) => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/waitlist', {
+      const response = await axios.post('https://memotag-backend-jmqy.onrender.com/api/waitlist', {
         username,
         email,
         phonenumber,
