@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    overflow-x: hidden;
+  }
+  .blob-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .blob {
+    width: 600px;
+    height: 600px;
+    background: #3977EB;
+    border-radius: 33% 67% 60% 40% / 43% 36% 64% 57%;
+    animation: blobAnimation 10s ease-in-out infinite;
+    filter: blur(40px);
+    transition: all 1s ease-in-out;
+  }
+  
+  @keyframes blobAnimation {
+    0%, 100% {
+      border-radius: 33% 67% 60% 40% / 43% 36% 64% 57%;
+      transform: translate(0, 0);
+    }
+    50% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      transform: translate(40px, -60px);
+    }
+  }
+  
